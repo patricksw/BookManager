@@ -2,8 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
     <SpaRoot>..\basis.desafio.client</SpaRoot>
     <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
     <SpaProxyServerUrl>https://localhost:52836</SpaProxyServerUrl>
@@ -14,12 +12,18 @@
       <Version>8.*-*</Version>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Basis.Desafio.Application\Basis.Desafio.Application.csproj" />
     <ProjectReference Include="..\basis.desafio.client\basis.desafio.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="..\Basis.Desafio.CrossCutting\Basis.Desafio.CrossCutting.csproj" />
+    <ProjectReference Include="..\Basis.Desafio.Domain\Basis.Desafio.Domain.csproj" />
+    <ProjectReference Include="..\Basis.Desafio.Infra.MongoDb\Basis.Desafio.Infra.MongoDb.csproj" />
   </ItemGroup>
 
 </Project>

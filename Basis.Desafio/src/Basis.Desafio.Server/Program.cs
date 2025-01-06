@@ -1,4 +1,9 @@
 
+using Basis.Desafio.Server.Configuration;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
 namespace Basis.Desafio.Server
 {
     public class Program
@@ -13,6 +18,9 @@ namespace Basis.Desafio.Server
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.DeclareConfiguration(builder.Configuration);
+            builder.Services.DeclareServices();
 
             var app = builder.Build();
 

@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 interface WeatherForecast {
   date: string;
@@ -18,26 +17,22 @@ interface WeatherForecast {
 export class AppComponent implements OnInit {
   public forecasts: WeatherForecast[] = [];
 
-  constructor(private http: HttpClient, private modalService: NgbModal) { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.getForecasts();
+    //this.getForecasts();
   }
 
-  public open(modal: any): void {
-    this.modalService.open(modal);
-  }
-
-  getForecasts() {
-    this.http.get<WeatherForecast[]>('/weatherforecast').subscribe(
-      (result) => {
-        this.forecasts = result;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  }
+  //getForecasts() {
+  //  this.http.get<WeatherForecast[]>('/weatherforecast').subscribe(
+  //    (result) => {
+  //      this.forecasts = result;
+  //    },
+  //    (error) => {
+  //      console.error(error);
+  //    }
+  //  );
+  //}
 
   title = 'basis.desafio.client';
 }

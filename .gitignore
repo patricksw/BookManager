@@ -9,3 +9,11 @@
 /Basis.Desafio/Basis.Desafio.Server/obj
 /Basis.Desafio/src/Basis.Desafio.Server/bin/Debug/net8.0
 /Basis.Desafio/src/Basis.Desafio.Server/obj
+/Basis.Desafio/src/Basis.Desafio.Application/bin/Debug/net8.0
+/Basis.Desafio/src/Basis.Desafio.Application/obj
+/Basis.Desafio/src/Basis.Desafio.CrossCutting/bin/Debug/net8.0
+/Basis.Desafio/src/Basis.Desafio.CrossCutting/obj
+/Basis.Desafio/src/Basis.Desafio.Domain/bin/Debug/net8.0
+/Basis.Desafio/src/Basis.Desafio.Domain/obj
+/Basis.Desafio/src/Basis.Desafio.Infra.MongoDb/bin/Debug/net8.0
+/Basis.Desafio/src/Basis.Desafio.Infra.MongoDb/obj

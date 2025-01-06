@@ -1,3 +1,5 @@
+using System;
+
 namespace Basis.Desafio.Server
 {
     public class WeatherForecast
