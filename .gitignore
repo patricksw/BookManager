@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Basis.Desafio/.vs/Basis.Desafio
+/Basis.Desafio/basis.desafio.client/.vscode
+/Basis.Desafio/basis.desafio.client/obj/Debug
+/Basis.Desafio/Basis.Desafio.Server/bin/Debug/net8.0
+/Basis.Desafio/Basis.Desafio.Server/obj
