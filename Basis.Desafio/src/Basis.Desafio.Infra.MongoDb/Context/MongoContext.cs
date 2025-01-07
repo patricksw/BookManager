@@ -16,5 +16,7 @@ namespace Basis.Desafio.Infra.MongoDb.Context
             _db = client.GetDatabase(mongoConfiguration.DataBaseName);
         }
         public IMongoCollection<LivroCollection> CollectionLivro => _db.GetCollection<LivroCollection>("Livro");
+        public IMongoCollection<AssuntoCollection> CollectionAssunto => _db.GetCollection<AssuntoCollection>("Assunto");
+        public IMongoCollection<AutorCollection> CollectionAutor => _db.GetCollection<AutorCollection>("Autor");
     }
 }

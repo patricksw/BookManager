@@ -1,4 +1,5 @@
-﻿using Basis.Desafio.Application.Livros.Services;
+﻿using Basis.Desafio.Application.Assuntos.Services;
+using Basis.Desafio.Application.Livros.Services;
 using Basis.Desafio.Domain.Repositories;
 using Basis.Desafio.Domain.Services;
 using Basis.Desafio.Infra.MongoDb.Repositories;
@@ -16,8 +17,12 @@ namespace Basis.Desafio.Server.Configuration
             services.AddSingleton(config)
                      //repositories
                      .AddScoped<ILivroRepository, LivroRepository>()
+                     .AddScoped<IAutorRepository, AutorRepository>()
+                     .AddScoped<IAssuntoRepository, AssuntoRepository>()
                      //services
                      .AddScoped<ILivroService, LivroService>()
+                     .AddScoped<IAutorService, AutorService>()
+                     .AddScoped<IAssuntoService, AssuntoService>()
                      .AddSingleton<IMapper, ServiceMapper>();
 
             return services;
