@@ -20,5 +20,14 @@ namespace Basis.Desafio.Application.Livros.Services
         {
             return await _repository.ReadAll();
         }
+
+        public async Task<Livro> GetById(Guid id) => await _repository.Read(id);
+
+        public async Task<bool> Update(Guid id, Livro livro)
+        {
+            return await _repository.Update(id, livro);
+        }
+
+        public async Task<bool> Delete(Guid id) => await _repository.Delete(id);
     }
 }
