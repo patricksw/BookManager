@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace Basis.Desafio.Server.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("livro")]
     public class LivroController(ILogger<LivroController> logger, ILivroService service, IMapper mapper) : ControllerBase
     {
         private readonly ILogger<LivroController> _logger = logger;
