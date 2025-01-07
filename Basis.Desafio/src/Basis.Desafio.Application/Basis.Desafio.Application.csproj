@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Basis.Desafio.CrossCutting\Basis.Desafio.CrossCutting.csproj" />
+    <ProjectReference Include="..\Basis.Desafio.Domain\Basis.Desafio.Domain.csproj" />
+    <ProjectReference Include="..\Basis.Desafio.Infra.MongoDb\Basis.Desafio.Infra.MongoDb.csproj" />
+  </ItemGroup>
+
+</Project>

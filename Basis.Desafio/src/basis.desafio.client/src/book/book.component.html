@@ -1,0 +1,22 @@
+<h1 id="tableLabel">Livros</h1>
+<p *ngIf="!livros"><em>Loading...</em></p>
+<table class="table" *ngIf="livros">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Editora</th>
+      <th scope="col">Edição</th>
+      <th scope="col">Ano de Publicação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let livro of livros">
+      <th scope="row">{{livro.codI}}</th>
+      <td>{{livro.titulo}}</td>
+      <td>{{livro.editora}}</td>
+      <td>{{livro.edicao}}</td>
+      <td>{{livro.anoPublicacao}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,2 @@
+C:\source\BookManager\Basis.Desafio\basis.desafio.client\obj\Debug\basis.desafio.client.esproj.CoreCompileInputs.cache
+C:\source\BookManager\Basis.Desafio\src\basis.desafio.client\obj\Debug\basis.desafio.client.esproj.CoreCompileInputs.cache

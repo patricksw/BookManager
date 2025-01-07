@@ -1,11 +1,33 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basis.Desafio.Server", "Basis.Desafio.Server\Basis.Desafio.Server.csproj", "{07452D37-8057-4A56-9548-465029E80A79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basis.Desafio.Server", "src\Basis.Desafio.Server\Basis.Desafio.Server.csproj", "{07452D37-8057-4A56-9548-465029E80A79}"
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "basis.desafio.client", "basis.desafio.client\basis.desafio.client.esproj", "{634D2B55-28E2-43B8-BFF7-CA3B5B41E81C}"
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "basis.desafio.client", "src\basis.desafio.client\basis.desafio.client.esproj", "{634D2B55-28E2-43B8-BFF7-CA3B5B41E81C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation", "1. Presentation", "{D5638101-F110-4BE4-85F7-648AD9B66CFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Application", "2. Application", "{03ABD6B4-1A0E-44ED-8323-03D9BC044F6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Domain", "3. Domain", "{02B6636B-1070-4F83-BD9D-9267FC29267A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infra", "4. Infra", "{60D99419-519D-4F16-B92F-2A83DF321C28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Cross Cutting", "5. Cross Cutting", "{6A329C4E-7438-4B95-AA61-33ABD25BA7CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6. Tests", "6. Tests", "{4862FA49-87A2-420E-9098-97B20A43AC30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 Mongo Db", "4.1 Mongo Db", "{9CB2CCF4-2F58-4671-A192-423779DCCA30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basis.Desafio.Infra.MongoDb", "src\Basis.Desafio.Infra.MongoDb\Basis.Desafio.Infra.MongoDb.csproj", "{DB102866-FB3B-4201-9C5B-DD3F67BBC62A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basis.Desafio.CrossCutting", "src\Basis.Desafio.CrossCutting\Basis.Desafio.CrossCutting.csproj", "{7E254AAF-F733-45BD-9E34-ABB86BC0D843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basis.Desafio.Domain", "src\Basis.Desafio.Domain\Basis.Desafio.Domain.csproj", "{F272F3FD-67BB-4A52-A037-A8C6969A5F64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basis.Desafio.Application", "src\Basis.Desafio.Application\Basis.Desafio.Application.csproj", "{E4A11CBF-1E96-4043-8750-557A248887CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,8 +45,33 @@ Global
 		{634D2B55-28E2-43B8-BFF7-CA3B5B41E81C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{634D2B55-28E2-43B8-BFF7-CA3B5B41E81C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{634D2B55-28E2-43B8-BFF7-CA3B5B41E81C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DB102866-FB3B-4201-9C5B-DD3F67BBC62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB102866-FB3B-4201-9C5B-DD3F67BBC62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB102866-FB3B-4201-9C5B-DD3F67BBC62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB102866-FB3B-4201-9C5B-DD3F67BBC62A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E254AAF-F733-45BD-9E34-ABB86BC0D843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E254AAF-F733-45BD-9E34-ABB86BC0D843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E254AAF-F733-45BD-9E34-ABB86BC0D843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E254AAF-F733-45BD-9E34-ABB86BC0D843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F272F3FD-67BB-4A52-A037-A8C6969A5F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F272F3FD-67BB-4A52-A037-A8C6969A5F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F272F3FD-67BB-4A52-A037-A8C6969A5F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F272F3FD-67BB-4A52-A037-A8C6969A5F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4A11CBF-1E96-4043-8750-557A248887CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4A11CBF-1E96-4043-8750-557A248887CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4A11CBF-1E96-4043-8750-557A248887CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4A11CBF-1E96-4043-8750-557A248887CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{07452D37-8057-4A56-9548-465029E80A79} = {D5638101-F110-4BE4-85F7-648AD9B66CFA}
+		{634D2B55-28E2-43B8-BFF7-CA3B5B41E81C} = {D5638101-F110-4BE4-85F7-648AD9B66CFA}
+		{9CB2CCF4-2F58-4671-A192-423779DCCA30} = {60D99419-519D-4F16-B92F-2A83DF321C28}
+		{DB102866-FB3B-4201-9C5B-DD3F67BBC62A} = {9CB2CCF4-2F58-4671-A192-423779DCCA30}
+		{7E254AAF-F733-45BD-9E34-ABB86BC0D843} = {6A329C4E-7438-4B95-AA61-33ABD25BA7CC}
+		{F272F3FD-67BB-4A52-A037-A8C6969A5F64} = {02B6636B-1070-4F83-BD9D-9267FC29267A}
+		{E4A11CBF-1E96-4043-8750-557A248887CE} = {03ABD6B4-1A0E-44ED-8323-03D9BC044F6B}
 	EndGlobalSection
 EndGlobal
