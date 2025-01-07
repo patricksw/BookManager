@@ -39,5 +39,46 @@ namespace Basis.Desafio.Server.Controllers
                 return BadRequest();
             }
         }
+
+        [HttpGet("{id}")]
+        public async Task<LivroResponse> GetById(string id)
+        {
+            if (!Guid.TryParse(id, out Guid _id)) throw new InvalidCastException();
+            var livro = await _service.GetById(_id);
+            return _mapper.Map<LivroResponse>(livro);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Edit(string id, EditLivroRequest request)
+        {
+            try
+            {
+                if (!Guid.TryParse(id, out Guid _id)) throw new InvalidCastException();
+                var livro = _mapper.Map<Livro>(request);
+                await _service.Update(_id, livro);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erro ao atualizar.");
+                return BadRequest();
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(string id)
+        {
+            try
+            {
+                if (!Guid.TryParse(id, out Guid _id)) throw new InvalidCastException();
+                await _service.Delete(_id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erro ao excluir.");
+                return BadRequest();
+            }
+        }
     }
 }

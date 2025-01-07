@@ -41,5 +41,16 @@ export class BookComponent implements OnInit {
     );
   }
 
+  onDelete(id: string) {
+    this.http.delete<any>('/livro/' + id).subscribe({
+      next: data => {
+        this.getLivros();
+      },
+      error: error => {
+        console.error('There was an error!', error);
+      }
+    });
+  }
+
   title = 'Livro';
 }

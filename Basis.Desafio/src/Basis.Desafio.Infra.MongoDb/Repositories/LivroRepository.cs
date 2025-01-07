@@ -43,7 +43,6 @@ namespace Basis.Desafio.Infra.MongoDb.Repositories
             var filter = FindById(id);
             var dto = await _context.CollectionLivro.Find(filter).FirstOrDefaultAsync();
 
-            dto.CodI = domain.CodI;
             dto.Titulo = domain.Titulo;
             dto.Editora = domain.Editora;
             dto.Edicao = domain.Edicao;

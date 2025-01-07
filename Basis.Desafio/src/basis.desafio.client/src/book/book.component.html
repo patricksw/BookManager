@@ -1,4 +1,5 @@
 <h1 id="tableLabel">Livros</h1>
+<a class="btn btn-primary" href="/book-create" routerLink="/book-create" role="button">Cadastrar novo Livro</a>
 <p *ngIf="!livros"><em>Loading...</em></p>
 <table class="table" *ngIf="livros">
   <thead>
@@ -8,6 +9,8 @@
       <th scope="col">Editora</th>
       <th scope="col">Edição</th>
       <th scope="col">Ano de Publicação</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +20,12 @@
       <td>{{livro.editora}}</td>
       <td>{{livro.edicao}}</td>
       <td>{{livro.anoPublicacao}}</td>
+      <td>
+        <a href="/book-edit/{{livro.id}}" class="badge-primary">Editar</a>
+      </td>
+      <td>
+        <button type="button" class="btn btn-sm btn-danger" (click)="onDelete(livro.id)">Excluir</button>
+      </td>
     </tr>
   </tbody>
 </table>

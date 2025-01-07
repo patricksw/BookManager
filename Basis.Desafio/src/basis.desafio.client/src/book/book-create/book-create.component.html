@@ -1,0 +1,20 @@
+<h1 id="tableLabel">Cadastrar novo livro</h1>
+<form [formGroup]="bookCreate" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Título</label>
+    <input type="text" class="form-control" placeholder="Título" formControlName="titulo">
+  </div>
+  <div class="form-group">
+    <label>Editora</label>
+    <input type="text" class="form-control" placeholder="Editora" formControlName="editora">
+  </div>
+  <div class="form-group">
+    <label>Edição</label>
+    <input type="text" class="form-control" placeholder="Edição" formControlName="edicao">
+  </div>
+  <div class="form-group">
+    <label>Ano de Publicação</label>
+    <input type="text" class="form-control" placeholder="Ano de Publicação" formControlName="anoPublicacao">
+  </div>
+  <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
