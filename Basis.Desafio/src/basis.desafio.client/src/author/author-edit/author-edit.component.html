@@ -1,1 +1,8 @@
-<p>author-edit works!</p>
+<h1 id="tableLabel">Editar Autor</h1>
+<form [formGroup]="authorEdit" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Nome</label>
+    <input type="text" class="form-control" placeholder="Nome" formControlName="nome">
+  </div>
+  <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

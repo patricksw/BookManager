@@ -7,9 +7,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 export interface Livro {
   id: string;
   codI: number;
-  titulo: number;
+  titulo: string;
   editora: string;
-  edicao: string;
+  edicao: number;
   anoPublicacao: string;
 }
 

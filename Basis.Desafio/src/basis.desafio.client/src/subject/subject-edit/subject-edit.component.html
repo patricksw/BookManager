@@ -1,1 +1,8 @@
-<p>subject-edit works!</p>
+<h1 id="tableLabel">Editar Assuntop</h1>
+<form [formGroup]="subjectEdit" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Descrição</label>
+    <input type="text" class="form-control" placeholder="Descrição" formControlName="descricao">
+  </div>
+  <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
