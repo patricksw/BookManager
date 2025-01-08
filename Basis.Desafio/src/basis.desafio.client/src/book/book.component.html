@@ -1,5 +1,11 @@
-<h1 id="tableLabel">Livros</h1>
-<a class="btn btn-primary" href="/book-create" routerLink="/book-create" role="button">Cadastrar novo Livro</a>
+<div class="d-flex flex-row">
+  <div class="p-2">
+    <h1 id="tableLabel">Livros</h1>
+  </div>
+  <div class="p-2">
+    <a class="btn btn-primary" href="/book-create" routerLink="/book-create" role="button">Cadastrar novo Livro</a>
+  </div>
+</div>
 <p *ngIf="!livros"><em>Loading...</em></p>
 <table class="table" *ngIf="livros">
   <thead>

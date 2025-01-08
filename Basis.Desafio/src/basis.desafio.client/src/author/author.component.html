@@ -1,5 +1,11 @@
-<h1 id="tableLabel">Autores</h1>
-<a class="btn btn-primary" href="/author-create" routerLink="/author-create" role="button">Cadastrar novo Autor</a>
+<div class="d-flex flex-row">
+  <div class="p-2">
+    <h1 id="tableLabel">Autores</h1>
+  </div>
+  <div class="p-2">
+    <a class="btn btn-primary" href="/author-create" routerLink="/author-create" role="button">Cadastrar novo Autor</a>
+  </div>
+</div>
 <p *ngIf="!autores"><em>Loading...</em></p>
 <table class="table" *ngIf="autores">
   <thead>

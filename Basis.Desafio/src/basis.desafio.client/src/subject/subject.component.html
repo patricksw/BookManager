@@ -1,5 +1,11 @@
-<h1 id="tableLabel">Assuntos</h1>
-<a class="btn btn-primary" href="/subject-create" routerLink="/subject-create" role="button">Cadastrar novo Assunto</a>
+<div class="d-flex flex-row">
+  <div class="p-2">
+    <h1 id="tableLabel">Assuntos</h1>
+  </div>
+  <div class="p-2">
+    <a class="btn btn-primary" href="/subject-create" routerLink="/subject-create" role="button">Cadastrar novo Assunto</a>
+  </div>
+</div>
 <p *ngIf="!assuntos"><em>Loading...</em></p>
 <table class="table" *ngIf="assuntos">
   <thead>

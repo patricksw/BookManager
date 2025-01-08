@@ -1,8 +1,16 @@
-<h1 id="tableLabel">Cadastrar novo Assunto</h1>
+<div class="d-flex flex-row">
+  <div class="p-2">
+    <h1 id="tableLabel">Novo Assunto</h1>
+  </div>
+</div>
 <form [formGroup]="subjectCreate" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label>Descrição</label>
     <input type="text" class="form-control" placeholder="Descrição" formControlName="descricao">
   </div>
-  <button type="submit" class="btn btn-primary">Salvar</button>
+  <div class="d-flex flex-row">
+    <div class="p-2">
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+  </div>
 </form>
