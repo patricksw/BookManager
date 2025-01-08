@@ -20,7 +20,11 @@ namespace Basis.Desafio.Infra.MongoDb.Repositories
         {
             var dto = _mapper.Map<LivroCollection>(domain);
             dto.Id = Guid.NewGuid();
-            dto.CodI = await _context.CollectionLivro.CountDocumentsAsync(x => true) + 1;
+            dto.CodI = (await _context.CollectionLivro.Find(x => true)
+                                                      .SortByDescending(x => x.CodI)
+                                                      .Limit(1)
+                                                      .FirstOrDefaultAsync()).CodI + 1;
+
             await _context.CollectionLivro.InsertOneAsync(dto);
             return dto.Id;
         }

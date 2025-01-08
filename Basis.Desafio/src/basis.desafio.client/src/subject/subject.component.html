@@ -1,1 +1,25 @@
-<p>subject works!</p>
+<h1 id="tableLabel">Assuntos</h1>
+<a class="btn btn-primary" href="/subject-create" routerLink="/subject-create" role="button">Cadastrar novo Assunto</a>
+<p *ngIf="!assuntos"><em>Loading...</em></p>
+<table class="table" *ngIf="assuntos">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Descrição</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let assunto of assuntos">
+      <th scope="row">{{assunto.codAs}}</th>
+      <td>{{assunto.descricao}}</td>
+      <td>
+        <a href="/subject-edit/{{assunto.id}}" class="badge-primary">Editar</a>
+      </td>
+      <td>
+        <button type="button" class="btn btn-sm btn-danger" (click)="onDelete(assunto.id)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

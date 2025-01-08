@@ -1,1 +1,25 @@
-<p>author works!</p>
+<h1 id="tableLabel">Autores</h1>
+<a class="btn btn-primary" href="/author-create" routerLink="/author-create" role="button">Cadastrar novo Autor</a>
+<p *ngIf="!autores"><em>Loading...</em></p>
+<table class="table" *ngIf="autores">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let autor of autores">
+      <th scope="row">{{autor.codAu}}</th>
+      <td>{{autor.nome}}</td>
+      <td>
+        <a href="/author-edit/{{autor.id}}" class="badge-primary">Editar</a>
+      </td>
+      <td>
+        <button type="button" class="btn btn-sm btn-danger" (click)="onDelete(autor.id)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
