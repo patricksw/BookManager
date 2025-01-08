@@ -1,4 +1,8 @@
-<h1 id="tableLabel">Cadastrar novo livro</h1>
+<div class="d-flex flex-row">
+  <div class="p-2">
+    <h1 id="tableLabel">Novo livro</h1>
+  </div>
+</div>
 <form [formGroup]="bookCreate" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label>Título</label>
@@ -16,5 +20,9 @@
     <label>Ano de Publicação</label>
     <input type="text" class="form-control" placeholder="Ano de Publicação" formControlName="anoPublicacao">
   </div>
-  <button type="submit" class="btn btn-primary">Salvar</button>
+  <div class="d-flex flex-row">
+    <div class="p-2">
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+  </div>
 </form>

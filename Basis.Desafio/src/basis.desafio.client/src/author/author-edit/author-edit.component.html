@@ -1,8 +1,16 @@
-<h1 id="tableLabel">Editar Autor</h1>
+<div class="d-flex flex-row">
+  <div class="p-2">
+    <h1 id="tableLabel">Editar Autor</h1>
+  </div>
+</div>
 <form [formGroup]="authorEdit" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label>Nome</label>
     <input type="text" class="form-control" placeholder="Nome" formControlName="nome">
   </div>
-  <button type="submit" class="btn btn-primary">Salvar</button>
+  <div class="d-flex flex-row">
+    <div class="p-2">
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+  </div>
 </form>
